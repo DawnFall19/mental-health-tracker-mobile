@@ -3,6 +3,7 @@ import 'package:mental_health_tracker/screens/moodentry_form.dart';
 import 'package:mental_health_tracker/screens/list_moodentry.dart';
 import 'package:provider/provider.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
+import 'package:mental_health_tracker/screens/login.dart';
 
 class ItemHomepage {
   final String name;
@@ -41,7 +42,7 @@ class ItemCard extends StatelessWidget {
           } else if (item.name == "Logout") {
               final response = await request.logout(
                   // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
-                  "http://[APP_URL_KAMU]/auth/logout/");
+                  "http://10.0.2.2/auth/logout/");
               String message = response["message"];
               if (context.mounted) {
                   if (response['status']) {

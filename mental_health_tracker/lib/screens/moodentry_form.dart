@@ -121,7 +121,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
                             // Kirim ke Django dan tunggu respons
                             // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                             final response = await request.postJson(
-                                "http://[URL_APP_KAMU]/create-flutter/",
+                                "http://10.0.2.2/create-flutter/",
                                 jsonEncode(<String, String>{
                                     'mood': _mood,
                                     'mood_intensity': _moodIntensity.toString(),
